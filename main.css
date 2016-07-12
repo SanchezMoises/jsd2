@@ -1,0 +1,99 @@
+
+
+body
+{
+  padding: 30px;
+  background-color: #fcfcfc;
+}
+.center-div
+{
+  margin: 0 auto;
+  width: 900px;
+  height: 650px;
+  background-color: #ccc;
+  border-radius: 3px;
+  padding: 30px;
+}
+
+
+.inner-div
+{
+     margin: auto;
+     width: 100px;
+     height: 100px;  
+}
+
+
+h1, h2, h3, h4, h5, h6 
+{ color: #362C20;
+  padding: 0 0 10px 0;
+  text-align: center;
+
+}
+h1{
+  margin-top: 20px;
+
+}
+
+ol { display: block;
+  text-align: center;
+  margin: 20px auto;
+}
+
+  ul{
+    display: block;
+  text-align: center;
+  margin: 20px auto;
+
+  }
+  a{
+    display: block;
+  text-align: center;
+  margin: 20px auto;
+
+  }
+  li{
+    display: block;
+  text-align: center;
+  margin: 20px auto;
+
+  }
+
+
+
+
+
+/*
+{  
+    margin: 0 auto;
+  }*/
+
+/**{
+   margin: 0 auto;
+
+}
+body{
+ 
+    
+	background-color: lightblue;
+}
+#uno{
+
+   margin: 0 auto;
+   width: 90%;
+ border: 25px solid green;
+}
+
+.dos{
+  margin: 0 auto;
+     width: 800px; 
+    height: 680px;
+    border: 300px solid green;
+    padding: 25px;
+    margin: 25px;
+
+}
+
+
+
+
