@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>template</title>
+	<link rel="stylesheet" href="template.css">
+</head>
+<body>
+	
+<h1>Arrays</h1>
+
+
+
+
+	<script>
+		
+
+      var days =[ "monday" , "martes", "miercoles", "jueves", "viernes"]
+       
+       days.push("sat");
+
+
+
+        /* tecnique #1 for looping over an array / using forEach method with callback function */
+       console.log('--- forEach technique--')
+       days.forEach(printDay);
+
+       function printDay(item, index) {
+       	console.log(item, index);
+       }
+
+
+       
+
+       console.log('--- anonymous function --')
+        days.forEach(function printDay(item, index) {
+       	console.log(item, index);
+    
+      });
+       
+
+       /* tecnique #2 for looping over an array / using thew for loop */
+        console.log('--- for loop technique--')
+       for (var i = 0; i < days.length; i++) {
+       	// ...
+       	console.log(i, days[i]);
+       	//..
+       }
+
+
+
+
+
+	</script>
+</body>
+</html>
