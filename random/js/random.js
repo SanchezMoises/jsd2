@@ -38,4 +38,7 @@ function randomAddress () {
 }
 resultado = randomAddress();
 console.log(resultado);
+//document.write(resultado); to print in the browser//
+
+
 
