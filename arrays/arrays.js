@@ -12,7 +12,7 @@
  */
 
      var q1 = ['image1.png', 'image2.png', 'image3.png']
-     console.log('quesion 1' + q1);
+     console.log('question 1' + q1);
 
 /**
  * Question 2
@@ -89,7 +89,10 @@ console.log('question 6',q6);
 
 
 
-
+var str1 = "Hello ";
+var str2 = "world!";
+var str3 = " Have a nice day!";
+var res = str1.concat(str2,str3);
 
 
 
