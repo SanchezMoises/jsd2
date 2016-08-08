@@ -8,7 +8,7 @@ var jsonString = '{ "title": "Uploads from everyone", "link": "https://www.flick
 Part 1. Convert the string `jsonString` to a Javascript Object 
 and store it in a variable called `flickerObj`
 */
-
+var flickerObj = JSON.parse(jsonString);
 
 
 
@@ -20,6 +20,12 @@ The first console.log should return the following:
 "What a surprise in lyon. 2016-02-23T06:47:30-08:00"
 
 */
+var flickerItems = flickerObj.items;
+
+flickerItems.forEach(itemTitles);
+function itemTitles(i) {
+	console.log(i.title, i.date_taken);
+}
 
 
 /*
@@ -27,6 +33,13 @@ Part 3. Create a new array called 'links'. Iterate through the
 items array in flickerObj and store the the links to each 
 item in the 'links' array.
 */
+var links = [];
+
+flickerItems.forEach(getLinks);
+function getLinks(i) {
+	var link = i.link;
+	links.push(link);
+}
 
 
 
@@ -38,4 +51,4 @@ http://jsonlint.com/
 Did it create a valid JSON string?
 */ 
 
-
+var jsonLinks = JSON.stringify(links);

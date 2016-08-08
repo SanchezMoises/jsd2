@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>template</title>
+	<link rel="stylesheet" href="template.css">
+</head>
+<body>
+	
+<h1>DOM Tree</h1>
+
+
+<div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam harum earum esse recusandae ab, cumque dolor, distinctio dicta, natus iure sint. Similique eius vero, eaque. Quisquam fuga illo consequuntur in.</p>
+</div>
+
+<div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor minima, doloribus quas explicabo quam eligendi architecto. Deserunt aliquid ut ratione necessitatibus, quis maiores rerum quam laudantium commodi, dicta ipsa temporibus.</p>
+
+</div>
+<div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor minima, doloribus quas explicabo quam eligendi architecto. Deserunt aliquid ut ratione necessitatibus, quis maiores rerum quam laudantium commodi, dicta ipsa temporibus.</p>
+
+</div>
+
+<ul id="menu">
+
+	<LI>1</LI>
+	<li>2</li>
+	<li>3</li>
+
+
+
+</ul>
+
+<style>
+
+	 div p {
+	 	color:blue;
+	 }
+
+ </style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+
+  //getting element from DOMM
+  
+  var div  = document.querySelector(" div ")
+
+  var p = document.querySelector(" div p")
+
+
+function updateParagraph(text) {
+	console.log('updateParagraph');
+	 p.innerHTML  = text
+}
+
+var $div = $("div");
+var $p = $("div p");
+
+
+function updateParagrapWhiteQuery(text) {
+	console.log('pdateParagrapWhiteQuery');
+	$p.html(text);
+}
+  //adding elements to DOM
+  // structute
+
+  var menu = document.querySelector("#menu");
+
+  // step 1: create new alemets
+     var li = document.createElement("li");
+
+  // step 2: add content / attributes to elemts
+    li.innerHTML = "4";
+
+ 
+   // step 3: append new element to DOM
+      menu.appendChild(li);
+
+
+      function addItem(text) {
+        console.log('addItem', text);
+
+      	var li = document.createElement("li");
+
+  
+        li.innerHTML = "text";
+
+ 
+   
+        menu.appendChild(li);
+
+      	
+      }
+
+
+
+
+
+ 
+
+
+</script>
+
+
+
+
+
+
+	<script src="template.js"></script>
+</body>
+</html>
