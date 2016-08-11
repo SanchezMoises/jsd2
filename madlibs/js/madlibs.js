@@ -16,9 +16,9 @@ var list     = document.querySelector('.list');
 
 
 // Events
-// ------------------------------------------
+
 generate.addEventListener('click', generateStartup);
-save.addEventListener('click', saveFavorite);
+
 print.addEventListener('click', printFavorites);
 
 
@@ -47,16 +47,7 @@ function generateStartup() {
 	return [randomNumberStarupX, randomNumberStarupY, startupIdea];
 }
 
-/*function saveFavorite() {
 
-	// TODO: add the new idea to the array
-	favorites.push("Checkr", "theSkimm", "Mic", "adela", "Gusto");
-	return favorites;
-
-
-}*/
-document.write("<hr />");
-document.write(saveFavorite());
 
 function printFavorites() {
 	var favoritesText;
@@ -77,16 +68,5 @@ function printFavorites() {
 
 }
 
-//document.write("<hr /");
-//document.write(printFavorites());
 
-
-	// update the list element with the new concatenated string
-	list.innerHTML = favoritesText;
-
-
-
-// Init
-// ------------------------------------------
-generateStartup();
 
