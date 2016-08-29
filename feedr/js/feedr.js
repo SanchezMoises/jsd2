@@ -1,7 +1,23 @@
-/*
-  Please add all Javascript code to this file.
-*/
 
+
+
+
+var newsKey    = '5650db7851ef4895b2f40e5366fac400';
+var newsSource = 'bbc-sport';
+var sourceJson;
+
+
+var home                = document.querySelector('.home');
+var popUp               = document.querySelector('#popUp');
+var closePopUp          = document.querySelector('.closePopUp');
+var articles            = document.querySelector('#main');
+var articleTitle        = document.querySelector('.articleContent a');
+var articleTemplate     = document.querySelector('#article-template');
+var articlePreviewTitle = document.querySelector('#popUp h1');
+var articlePreviewDesc  = document.querySelector('#popUp p');
+var articlePreviewLink  = document.querySelector('#popUp .popUpAction');
+var currentSource       = document.querySelector('.current-source');
+var sourcesDropdown     = document.querySelector('.news-sources');
 var sources = [
 	{
 		name: 'BBC',
@@ -29,34 +45,18 @@ var sources = [
 	},
 ];
 
-var newsKey    = '5650db7851ef4895b2f40e5366fac400';
-var newsSource = 'bbc-sport';
-var sourceJson;
-
-
-
-var popUp               = document.querySelector('#popUp');
-var closePopUp          = document.querySelector('.closePopUp');
-var articles            = document.querySelector('#main');
-var articleTitle        = document.querySelector('.articleContent a');
-var articleTemplate     = document.querySelector('#article-template');
-var articlePreviewTitle = document.querySelector('#popUp h1');
-var articlePreviewDesc  = document.querySelector('#popUp p');
-var articlePreviewLink  = document.querySelector('#popUp .popUpAction');
-var currentSource       = document.querySelector('.current-source');
-var sourcesDropdown     = document.querySelector('.news-sources');
-var home                = document.querySelector('.home');
 
 window.addEventListener('load', getArticles)
 closePopUp.addEventListener('click', togglePopUp);
 articles.addEventListener('click', articlePreview);
 sourcesDropdown.addEventListener('click', selectSource);
-home.addEventListener('click', showDefaultSource);
-window.addEventListener('load', getArticles)
-closePopUp.addEventListener('click', togglePopUp);
-articles.addEventListener('click', articlePreview);
-sourcesDropdown.addEventListener('click', selectSource);
-home.addEventListener('click', showDefaultSource);
+
+
+function getArticles() {
+	var url = 'https://newsapi.org/v1/articles?source=' + newsSource + '&apiKey=' + newsKey;
+	$.getJSON(url, displayArticles);
+}
+
 
 
 
@@ -97,10 +97,7 @@ function showDefaultSource(e) {
 
 
 
-function getArticles() {
-	var url = 'https://newsapi.org/v1/articles?source=' + newsSource + '&apiKey=' + newsKey;
-	$.getJSON(url, displayArticles);
-}
+
 
 
 

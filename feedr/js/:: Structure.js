@@ -188,5 +188,11 @@ function filter(e) {
 
 
 
+home.addEventListener('click', showDefaultSource);
+window.addEventListener('load', getArticles)
+closePopUp.addEventListener('click', togglePopUp);
+articles.addEventListener('click', articlePreview);
+sourcesDropdown.addEventListener('click', selectSource);
+home.addEventListener('click', showDefaultSource);
 
-Contact GitHub API Training Shop Blog About
+
