@@ -1,0 +1,124 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="fuzzyset.js"></script>
+<script type="text/javascript" src="wordcache.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" />
+<style type="text/css">
+
+	.jumbotron {
+		background-color: #333;
+		color: #fff;
+	}
+
+	.jumbotron p {
+		color: #aaa;
+	}
+
+	.jumbotron a {
+		color: #fff;
+	}
+
+</style>
+</head>
+<body onload="startApp()">
+
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<div class="container">
+			<h2>MY ROLLAS</h2>
+			
+		</div>
+	</div>
+<style>
+	div#jukePlayer {
+   width: 425px;
+   height: 350px;
+   margin: 10px 0 10px 0;
+}
+</style>
+
+	
+
+<script>
+	function playVideo(autoplay, loop) {
+   var theSelect = document.getElementById("jukeVids");
+   var theArgs;
+   if(autoplay == 1) {
+      theArgs = "&amp;autoplay=1";
+   }
+   if(loop == 1) {
+      theArgs += "&amp;loop=1";
+   }
+ 
+   for(var i = 0; i < theSelect.length; i++) {
+      if(theSelect.options[i].selected) {
+         var so = new SWFObject(theSelect.options[i].value + theArgs, "mymovie", "425", "350", "8", "#fff");
+         so.write("jukePlayer");
+         break;
+      }
+   }
+}
+
+</script>
+
+	<div class="container">
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="col-md-6">
+				<h2>PLAYLIST</h2>
+				<div class="form-group">
+					<textarea class="form-control" id="alltext" rows="5" maxlength="500"></textarea>
+				</div>
+				<p>
+					<button class="btn btn-lg btn-primary btn-success" id="start">Create a Spotify playlist!</button>
+				</p>
+				<div id="status"></div>
+			</div>
+			<div class="col-md-6">
+				<h2>track names</h2>
+				<div id="debug"></div>
+			</div>
+		</div>
+	</div>
+
+
+   <!-- extra -->
+
+   <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        JukeBox
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+</body>
+</html>
